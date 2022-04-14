@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig-base.json",
+  "compilerOptions": {
+    "paths": {
+      "@app/*": ["./src/*"],
+      "@ui/*": ["../ui/src/*"]
+    },
+    "types": ["vite/client"],
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  "include": [
+    "shims.d.ts",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "src/**/*.json",
+    "src/**/*.svg",
+    "../ui/src/**/*.ts",
+    "../ui/src/**/*.vue",
+    "../ui/src/**/*.json",
+    "../ui/src/**/*.svg",
+    "../ui/shims.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "volar-monorepo-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite --mode dev",
+    "lint": "eslint src/**/*.{vue,ts} --max-warnings 0 --no-fix"
+  },
+  "author": "",
+  "license": "ISC"
+}

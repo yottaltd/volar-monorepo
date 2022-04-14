@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig-base.json",
+  "compilerOptions": {
+    "paths": {
+      "@ui/*": ["./ui/*"],
+    },
+    "types": ["vite/client"],
+    "lib": ["esnext", "dom", "dom.iterable"]
+  },
+  "include": [
+    "shims.d.ts",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "src/**/*.json",
+    "src/**/*.svg"
+  ],
+  "exclude": ["node_modules"]
+}

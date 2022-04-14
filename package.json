@@ -2,19 +2,24 @@
   "name": "volar-starter",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
-  },
-  "dependencies": {
-    "vue": "next"
+    "clean": "lerna clean --yes",
+    "postclean": "lerna exec -- rimraf dist",
+    "preinit": "npm install && npm run clean",
+    "init": "lerna bootstrap"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "latest",
     "@volar-plugins/prettier-html": "latest",
     "@vue/compiler-sfc": "latest",
+    "lerna": "latest",
+    "rimraf": "latest",
     "typescript": "latest",
     "vite": "latest",
+    "vue": "next",
     "vue-tsc": "latest"
+  },
+  "dependencies": {
+    "app": "file:projects\\app",
+    "ui": "file:projects\\ui"
   }
 }

@@ -13,7 +13,7 @@
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
 
-  <button @click="count++">count is: {{ count }}</button>
+  <VButton :properties="buttonProps" @click="count++" />
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
@@ -23,11 +23,18 @@
 <preview msg="Hello Volar!"></preview>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import VButton from '@ui/button/VButton.vue'
+import { VButtonProperties } from '@ui/button/VButtonProperties'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+
+const buttonProps = computed(() => new VButtonProperties({
+  title: `${count.value}`,
+  disabled: false,
+}))
 </script>
 
 <style scoped>
